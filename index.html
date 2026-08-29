@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Barre de navigation (liens vers ancres pour SPA) -->
+    <nav>
+        <!-- Bloc gauche -->
+        <div class="nav-gauche">
+            <h1>Portfolio</h1>
+        </div>
+
+        <!-- Bloc droit -->
+        <ul class="nav-droite">
+            <li><a href="#accueil" class="actif">Accueil</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#formations">Formations</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+     <!-- Section Profil -->
+    <section id="profil">
+        <h2 class="titre-section">Profil</h2>
+
+        <div class="bloc-principal">
+            <div class="bloc-description">
+                <h3>Bright AKOGBETO</h3>
+                <p>
+                    Je suis un étudiant en informatique passionné par les <strong>systèmes, les réseaux et le cloud computing</strong>.
+                    J'aime comprendre les infrastructures technologiques, analyser leur fonctionnement et améliorer leur sécurité, leur stabilité et leur performance.
+                </p>
+                <p>
+                    Mon parcours me pousse à m'intéresser aux architectures réseau, à l'administration système, à la virtualisation et à la mise en place de solutions fiables et évolutives.
+                    J'ai un fort intérêt pour l'apprentissage continu, la résolution de problèmes techniques et la mise en pratique des connaissances acquises en environnement réel.
+                </p>
+                <h4>Atouts & Qualités</h4>
+                <ul>
+                    <li>Esprit d'analyse et résolution de problèmes</li>
+                    <li>Autonomie et curiosité technique</li>
+                    <li>Capacité d'adaptation et travail en équipe</li>
+                    <li>Motivation pour l'apprentissage des technologies IT</li>
+                </ul>
+            </div>
+
+            <div class="bloc-photo">
+                <img src="images/IMG.jpg" alt="Photo de Bright AKOGBETO">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ligne horizontale -->
+    <hr class="separateur">
+
+    <!-- Section Compétences (ancien fichier competences.html) -->
+    <section id="competences">
+        <h2 class="titre-section">Compétences</h2>
+        <div class="section-cartes">
+            <div class="cartes-container">
+                <div class="carte">
+                    <h3>Systèmes & Virtualisation</h3>
+                    <ul>
+                        <li>Windows Server (Active Directory, services réseau)</li>
+                        <li>Linux (administration de base)</li>
+                        <li>Hyper-V (niveau 2), Docker (notions)</li>
+                    </ul>
+                </div>
+                <div class="carte">
+                    <h3>Réseaux & Télécoms</h3>
+                    <ul>
+                        <li>Modèle OSI, TCP/IP, adressage IP</li>
+                        <li>Architecture Cisco (niveau CCNA 1)</li>
+                        <li>Téléinformatique</li>
+                    </ul>
+                </div>
+                <div class="carte">
+                    <h3>Développement & Outils</h3>
+                    <ul>
+                        <li>C, Python (initiation)</li>
+                        <li>HTML/CSS, PHP, SQL / MySQL</li>
+                        <li>Git / GitHub, outils bureautiques</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cartes-container" style="margin-top:20px;">
+                <div class="carte">
+                    <h3>Conception & Méthodes</h3>
+                    <ul>
+                        <li>UML & Merise</li>
+                        <li>Gestion de projet IT, sécurité informatique</li>
+                    </ul>
+                </div>
+                <div class="carte">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Français — langue maternelle / courant</li>
+                        <li>Anglais — niveau technique (lecture doc. IT)</li>
+                        <li>Goun — pratiqué</li>
+                    </ul>
+                </div>
+                <div class="carte">
+                    <h3>Loisirs</h3>
+                    <ul>
+                        <li>Basket-ball</li>
+                        <li>Musique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets (ancien fichier projets.html) -->
+    <section id="projets">
+        <h2 class="titre-section">Projets Académiques & Pratiques</h2>
+        <div class="contenu">
+            <ul style="text-align:left; max-width:1000px; margin:0 auto;">
+                <li><strong>Déploiement d'infrastructures virtuelles (TP L2)</strong> — configuration et interconnexion de machines virtuelles (Windows Server / Windows Client) en environnement de lab.</li>
+                <li><strong>Architecture & modélisation de base de données (TP L1/L2)</strong> — conception de schémas conceptuels (Merise/UML) et implémentation sous MySQL avec requêtes SQL.</li>
+                <li><strong>Projets de développement</strong> — petits programmes modulaires en C (Arbre Généalogique) et Java POO (Sudoku).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section Formations (ancien fichier education.html) -->
+    <section id="formations">
+        <h2 class="titre-section">Formations</h2>
+        <div class="contenu" style="text-align:left; max-width:1000px; margin:0 auto;">
+            <h3>2024 – Présent (En cours)</h3>
+            <p><strong>Licence en Informatique, Réseau et Télécommunication</strong><br>
+            Spécialité : Systèmes, Réseaux et Cloud Computing — ESGIS Bénin, Cotonou.<br>
+            Modules clés : Administration Windows Server & Linux, Cisco CCNA1, Docker, Virtualisation, Sécurité.</p>
+
+            <h3>2023 – 2024</h3>
+            <p><strong>Diplôme du Technicien Industriel (DTI)</strong><br>
+            Spécialité : Installation et Maintenance Informatique — Lycée Technique F.M. Coulibaly.<br>
+            Acquis : installation, maintenance et configuration réseau, initiation à la programmation et aux bases de données.</p>
+        </div>
+    </section>
+
+
+
+    <!-- Section Contact (ancien fichier contact.html) -->
+    <section id="contact">
+        <h2 class="titre-section">Contact</h2>
+        <div class="contenu" style="text-align:left; max-width:800px; margin:0 auto;">
+            <p><strong>Téléphone :</strong> +229 01 48 97 48 19</p>
+            <p><strong>Email :</strong> <a href="mailto:akogbetobright@gmail.com">akogbetobright@gmail.com</a></p>
+            <p><strong>Adresse :</strong> Cotonou, Bénin</p>
+            <p><strong>Web :</strong> <a href="https://github.com/BrightJT" target="_blank" rel="noopener noreferrer">github.com/BrightJT</a> / <a href="https://linkedin.com/in/bright-akg" target="_blank" rel="noopener noreferrer">linkedin.com/in/bright-akg</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Liens réseaux sociaux avec icônes -->
+        <div class="reseaux-sociaux">
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i> 
+            </a>
+            <a href="https://github.com" target="_blank">
+                <i class="fab fa-github"></i> 
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+            </a>
+            <a href="https://wa.me/22951377717" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        
+        <!-- Ligne horizontale -->
+        <hr>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; Copyright - Bright AKOGBETO</p>
+        </div>
+    </footer>
+
+</body>
+</html>

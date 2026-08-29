@@ -20,15 +20,26 @@
             <h1>Portfolio</h1>
         </div>
 
-        <!-- Bloc droit -->
-        <ul class="nav-droite">
-            <li><a href="#accueil" class="actif">Accueil</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#formations">Formations</a></li>
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-actions">
+            <ul class="nav-droite" id="navLinks">
+                <li><a href="#accueil" class="actif">Accueil</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Basculer le mode sombre">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
 
      <!-- Section Profil -->
@@ -61,104 +72,197 @@
         </div>
     </section>
 
-    <!-- Ligne horizontale -->
-    <hr class="separateur">
+    <hr class="section-divider">
 
-    <!-- Section Compétences (ancien fichier competences.html) -->
+    <!-- Section Compétences -->
     <section id="competences">
         <h2 class="titre-section">Compétences</h2>
-        <div class="section-cartes">
-            <div class="cartes-container">
-                <div class="carte">
-                    <h3>Systèmes & Virtualisation</h3>
-                    <ul>
-                        <li>Windows Server (Active Directory, services réseau)</li>
-                        <li>Linux (administration de base)</li>
-                        <li>Hyper-V (niveau 2), Docker (notions)</li>
-                    </ul>
-                </div>
-                <div class="carte">
-                    <h3>Réseaux & Télécoms</h3>
-                    <ul>
-                        <li>Modèle OSI, TCP/IP, adressage IP</li>
-                        <li>Architecture Cisco (niveau CCNA 1)</li>
-                        <li>Téléinformatique</li>
-                    </ul>
-                </div>
-                <div class="carte">
-                    <h3>Développement & Outils</h3>
-                    <ul>
-                        <li>C, Python (initiation)</li>
-                        <li>HTML/CSS, PHP, SQL / MySQL</li>
-                        <li>Git / GitHub, outils bureautiques</li>
-                    </ul>
+        <div class="bloc-principal section-layout">
+            <div class="bloc-description">
+                <div class="section-cartes">
+                    <div class="cartes-container">
+                        <div class="carte">
+                            <h3>Systèmes & Virtualisation</h3>
+                            <ul>
+                                <li>Windows Server (Active Directory, services réseau)</li>
+                                <li>Linux (administration de base)</li>
+                                <li>Hyper-V (niveau 2), Docker (notions)</li>
+                            </ul>
+                        </div>
+                        <div class="carte">
+                            <h3>Réseaux & Télécoms</h3>
+                            <ul>
+                                <li>Modèle OSI, TCP/IP, adressage IP</li>
+                                <li>Architecture Cisco (niveau CCNA 1)</li>
+                                <li>Téléinformatique</li>
+                            </ul>
+                        </div>
+                        <div class="carte">
+                            <h3>Développement & Outils</h3>
+                            <ul>
+                                <li>C, Python (initiation)</li>
+                                <li>HTML/CSS, PHP, SQL / MySQL</li>
+                                <li>Git / GitHub, outils bureautiques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cartes-container" style="margin-top:20px;">
+                        <div class="carte">
+                            <h3>Conception & Méthodes</h3>
+                            <ul>
+                                <li>UML & Merise</li>
+                                <li>Gestion de projet IT, sécurité informatique</li>
+                            </ul>
+                        </div>
+                        <div class="carte">
+                            <h3>Langues</h3>
+                            <ul>
+                                <li>Français — langue maternelle / courant</li>
+                                <li>Anglais — niveau technique (lecture doc. IT)</li>
+                                <li>Goun — pratiqué</li>
+                            </ul>
+                        </div>
+                        <div class="carte">
+                            <h3>Loisirs</h3>
+                            <ul>
+                                <li>Basket-ball</li>
+                                <li>Musique</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="cartes-container" style="margin-top:20px;">
-                <div class="carte">
-                    <h3>Conception & Méthodes</h3>
-                    <ul>
-                        <li>UML & Merise</li>
-                        <li>Gestion de projet IT, sécurité informatique</li>
-                    </ul>
-                </div>
-                <div class="carte">
-                    <h3>Langues</h3>
-                    <ul>
-                        <li>Français — langue maternelle / courant</li>
-                        <li>Anglais — niveau technique (lecture doc. IT)</li>
-                        <li>Goun — pratiqué</li>
-                    </ul>
-                </div>
-                <div class="carte">
-                    <h3>Loisirs</h3>
-                    <ul>
-                        <li>Basket-ball</li>
-                        <li>Musique</li>
-                    </ul>
-                </div>
+
+            <div class="bloc-panel">
+                <h3>Axes de spécialisation</h3>
+                <ul>
+                    <li>Administration système</li>
+                    <li>Réseaux et sécurité</li>
+                    <li>Virtualisation et cloud</li>
+                    <li>Développement web de base</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Section Projets (ancien fichier projets.html) -->
+    <hr class="section-divider">
+
+    <!-- Section Projets -->
     <section id="projets">
         <h2 class="titre-section">Projets Académiques & Pratiques</h2>
-        <div class="contenu">
-            <ul style="text-align:left; max-width:1000px; margin:0 auto;">
-                <li><strong>Déploiement d'infrastructures virtuelles (TP L2)</strong> — configuration et interconnexion de machines virtuelles (Windows Server / Windows Client) en environnement de lab.</li>
-                <li><strong>Architecture & modélisation de base de données (TP L1/L2)</strong> — conception de schémas conceptuels (Merise/UML) et implémentation sous MySQL avec requêtes SQL.</li>
-                <li><strong>Projets de développement</strong> — petits programmes modulaires en C (Arbre Généalogique) et Java POO (Sudoku).</li>
-            </ul>
+        <div class="bloc-principal section-layout">
+            <div class="bloc-description">
+                <div class="contenu">
+                    <ul>
+                        <li><strong>Déploiement d'infrastructures virtuelles (TP L2)</strong> — configuration et interconnexion de machines virtuelles (Windows Server / Windows Client) en environnement de lab.</li>
+                        <li><strong>Architecture & modélisation de base de données (TP L1/L2)</strong> — conception de schémas conceptuels (Merise/UML) et implémentation sous MySQL avec requêtes SQL.</li>
+                        <li><strong>Projets de développement</strong> — petits programmes modulaires en C (Arbre Généalogique) et Java POO (Sudoku).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bloc-panel">
+                <h3>Focus projets</h3>
+                <ul>
+                    <li>Virtualisation</li>
+                    <li>Modélisation de données</li>
+                    <li>Base réseau / architecture</li>
+                    <li>Développement logiciel</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Section Formations (ancien fichier education.html) -->
+    <hr class="section-divider">
+
+    <!-- Section Formations -->
     <section id="formations">
         <h2 class="titre-section">Formations</h2>
-        <div class="contenu" style="text-align:left; max-width:1000px; margin:0 auto;">
-            <h3>2024 – Présent (En cours)</h3>
-            <p><strong>Licence en Informatique, Réseau et Télécommunication</strong><br>
-            Spécialité : Systèmes, Réseaux et Cloud Computing — ESGIS Bénin, Cotonou.<br>
-            Modules clés : Administration Windows Server & Linux, Cisco CCNA1, Docker, Virtualisation, Sécurité.</p>
+        <div class="bloc-principal section-layout">
+            <div class="bloc-description">
+                <div class="contenu" style="text-align:left; max-width:1000px; margin:0 auto;">
+                    <h3>2024 – Présent (En cours)</h3>
+                    <p><strong>Licence en Informatique, Réseau et Télécommunication</strong><br>
+                    Spécialité : Systèmes, Réseaux et Cloud Computing — ESGIS Bénin, Cotonou.<br>
+                    Modules clés : Administration Windows Server & Linux, Cisco CCNA1, Docker, Virtualisation, Sécurité.</p>
 
-            <h3>2023 – 2024</h3>
-            <p><strong>Diplôme du Technicien Industriel (DTI)</strong><br>
-            Spécialité : Installation et Maintenance Informatique — Lycée Technique F.M. Coulibaly.<br>
-            Acquis : installation, maintenance et configuration réseau, initiation à la programmation et aux bases de données.</p>
+                    <h3>2023 – 2024</h3>
+                    <p><strong>Diplôme du Technicien Industriel (DTI)</strong><br>
+                    Spécialité : Installation et Maintenance Informatique — Lycée Technique F.M. Coulibaly.<br>
+                    Acquis : installation, maintenance et configuration réseau, initiation à la programmation et aux bases de données.</p>
+                </div>
+            </div>
+
+            <div class="bloc-panel">
+                <h3>Parcours</h3>
+                <ul>
+                    <li>Licence informatique</li>
+                    <li>Réseaux et cloud</li>
+                    <li>Technicien industriel</li>
+                    <li>Base en gestion réseau</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <hr class="section-divider">
 
-
-    <!-- Section Contact (ancien fichier contact.html) -->
+    <!-- Section Contact -->
     <section id="contact">
         <h2 class="titre-section">Contact</h2>
-        <div class="contenu" style="text-align:left; max-width:800px; margin:0 auto;">
-            <p><strong>Téléphone :</strong> +229 01 48 97 48 19</p>
-            <p><strong>Email :</strong> <a href="mailto:akogbetobright@gmail.com">akogbetobright@gmail.com</a></p>
-            <p><strong>Adresse :</strong> Cotonou, Bénin</p>
-            <p><strong>Web :</strong> <a href="https://github.com/BrightJT" target="_blank" rel="noopener noreferrer">github.com/BrightJT</a> / <a href="https://linkedin.com/in/bright-akg" target="_blank" rel="noopener noreferrer">linkedin.com/in/bright-akg</a></p>
+        <div class="bloc-principal section-layout">
+            <div class="bloc-panel">
+                <h3>Envoyer un message</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label for="name">Nom</label>
+                            <input id="name" type="text" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label for="subject">Objet</label>
+                        <input id="subject" type="text" name="subject" placeholder="Objet du message">
+                    </div>
+                    <div class="field-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <div class="bloc-description">
+                <div class="contenu contact-card" style="text-align:left; max-width:800px; margin:0 auto;">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="label">Téléphone</span>
+                            <p>+229 01 48 97 48 19</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Email</span>
+                            <p><a href="mailto:akogbetobright@gmail.com">akogbetobright@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Adresse</span>
+                            <p>Cotonou, Bénin</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">Réseaux</span>
+                            <p>
+                                <a href="https://github.com/BrightJT" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <span class="contact-separator">/</span>
+                                <a href="https://linkedin.com/in/bright-akg" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -184,6 +288,120 @@
             <p>&copy; Copyright - Bright AKOGBETO</p>
         </div>
     </footer>
+
+    <script>
+        const nav = document.querySelector('nav');
+        const navDroite = document.querySelector('.nav-droite');
+
+        function updateNavVisibility() {
+            const isMobile = window.innerWidth <= 768;
+
+            if (!isMobile) {
+                nav.classList.remove('scrolled');
+                navDroite.style.opacity = '';
+                navDroite.style.visibility = '';
+                navDroite.style.transform = '';
+                navDroite.style.maxHeight = '';
+                navDroite.style.overflow = '';
+                return;
+            }
+
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        }
+
+        window.addEventListener('scroll', updateNavVisibility, { passive: true });
+        window.addEventListener('resize', updateNavVisibility);
+
+        updateNavVisibility();
+
+        const themeToggle = document.getElementById('themeToggle');
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const savedTheme = localStorage.getItem('theme');
+
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+            document.body.classList.toggle('dark-mode', isDark);
+            const icon = themeToggle.querySelector('i');
+            icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            themeToggle.setAttribute('aria-label', isDark ? 'Basculer en mode clair' : 'Basculer en mode sombre');
+        }
+
+        const initialTheme = savedTheme || 'light';
+        applyTheme(initialTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            const nextTheme = isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', nextTheme);
+            applyTheme(nextTheme);
+        });
+
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            const clickedInsideMenu = navLinks.contains(event.target) || menuToggle.contains(event.target);
+            if (!clickedInsideMenu && navLinks.classList.contains('open')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.querySelector('.form-status');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(contactForm);
+                const payload = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    subject: formData.get('subject') || 'Message depuis le portfolio',
+                    message: formData.get('message'),
+                    _captcha: false,
+                    _subject: 'Nouveau message depuis le portfolio'
+                };
+
+                formStatus.textContent = 'Envoi en cours...';
+                formStatus.className = 'form-status';
+
+                try {
+                    const response = await fetch('https://formsubmit.co/ajax/akogbetobright@gmail.com', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Erreur de réseau');
+                    }
+
+                    contactForm.reset();
+                    formStatus.textContent = 'Votre message a bien été envoyé. Je vous répondrai très prochainement.';
+                    formStatus.classList.add('success');
+                } catch (error) {
+                    formStatus.textContent = 'Une erreur s’est produite. Veuillez réessayer ou m’écrire directement par email.';
+                    formStatus.classList.add('error');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

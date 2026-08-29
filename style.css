@@ -30,12 +30,23 @@ body {
 }
 
 body.dark-mode {
-    --bg: #0f172a;
-    --dark-text: #e2e8f0;
-    --soft-text: #cbd5e1;
-    --card: #111827;
+    --bg: #020f1f;
+    --bg-2: #081a2b;
+    --panel: rgba(15, 28, 42, 0.85);
+    --panel-strong: rgba(10, 22, 34, 0.92);
+    --dark-text: #edf3fb;
+    --soft-text: #c9d7ea;
+    --muted: #9bb0c8;
+    --card: #0d1d2e;
+    --line: rgba(148, 163, 184, 0.16);
+    --blue: #52b4ff;
     background-color: var(--bg);
     color: var(--dark-text);
+}
+
+body.dark-mode nav {
+    background: rgba(8, 18, 31, 0.9);
+    border-bottom-color: rgba(148, 163, 184, 0.12);
 }
 
 body.dark-mode .section-layout .bloc-panel,
@@ -51,27 +62,55 @@ body.dark-mode #competences .competences-list ul,
 body.dark-mode .bloc-panel,
 body.dark-mode .carte,
 body.dark-mode #projets .section-layout .bloc-panel {
-    background: #111827;
+    background: var(--panel);
     color: var(--dark-text);
-    border-color: rgba(148, 163, 184, 0.15);
+    border: 1px solid var(--line);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02), 0 8px 22px rgba(2, 15, 31, 0.28);
 }
 
 body.dark-mode .nav-droite a,
 body.dark-mode .nav-gauche h1,
-body.dark-mode .theme-toggle {
-    color: #ecf0f1;
+body.dark-mode .theme-toggle,
+body.dark-mode .theme-toggle i,
+body.dark-mode .titre-section,
+body.dark-mode .contenu h2,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #c9d7ea;
 }
 
 body.dark-mode .section-divider {
-    box-shadow: 0 0 18px rgba(96, 165, 250, 0.28);
+    background: linear-gradient(90deg, transparent 0%, rgba(82, 180, 255, 0.6) 15%, rgba(184, 199, 217, 0.9) 50%, rgba(82, 180, 255, 0.6) 85%, transparent 100%);
+    box-shadow: 0 0 18px rgba(82, 180, 255, 0.18);
 }
 
 body.dark-mode #contact .contact-form input,
 body.dark-mode #contact .contact-form textarea {
-    background-color: #0b1220 !important;
-    background: #0b1220 !important;
+    background-color: rgba(10, 22, 34, 0.92) !important;
+    background: rgba(10, 22, 34, 0.92) !important;
     color: var(--dark-text) !important;
     border-color: rgba(148, 163, 184, 0.2) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode #contact .contact-form input:focus,
+body.dark-mode #contact .contact-form textarea:focus {
+    border-color: rgba(82, 180, 255, 0.72) !important;
+    box-shadow: 0 0 0 3px rgba(82, 180, 255, 0.12) !important;
+}
+
+body.dark-mode #contact .contact-form button {
+    background: linear-gradient(135deg, #52b4ff, #2d7ae5);
+    box-shadow: 0 10px 22px rgba(82, 180, 255, 0.22);
+}
+
+body.dark-mode .theme-toggle {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(148, 163, 184, 0.2);
 }
 
 body.dark-mode #contact .contact-form input::placeholder,

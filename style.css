@@ -166,6 +166,13 @@ nav.scrolled {
     font-size: 24px;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin: 0;
+}
+
+.nav-gauche h1 a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
 }
 
 nav.scrolled .nav-gauche h1 {

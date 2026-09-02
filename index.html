@@ -317,8 +317,8 @@
 
         const contactForm = document.getElementById('contactForm');
         const formStatus = document.querySelector('.form-status');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-        // Insert your Web3Forms access key here.
         const WEB3FORMS_ACCESS_KEY = '8377428d-5fb0-429c-96b3-c79999e34162';
 
         if (contactForm) {
@@ -326,35 +326,24 @@
                 event.preventDefault();
 
                 const formData = new FormData(contactForm);
-                const payload = {
-                    access_key: WEB3FORMS_ACCESS_KEY,
-                    name: formData.get('name'),
-                    email: formData.get('email'),
-                    replyto: formData.get('email'),
-                    subject: formData.get('subject') || 'Message depuis le portfolio',
-                    message: formData.get('message'),
-                    from_name: 'Portfolio Bright AKOGBETO',
-                };
+                formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+                formData.set('subject', formData.get('subject') || 'Message depuis le portfolio');
+                formData.append('replyto', formData.get('email'));
+                formData.append('from_name', 'Portfolio Bright AKOGBETO');
+                const originalText = submitBtn.textContent;
 
-                formStatus.textContent = 'Envoi en cours...';
+                submitBtn.textContent = 'Envoi en cours...';
+                submitBtn.disabled = true;
                 formStatus.className = 'form-status';
 
                 try {
-                    if (WEB3FORMS_ACCESS_KEY.startsWith('REMPLACE')) {
-                        throw new Error('Configuration manquante');
-                    }
-
-                    const emailResponse = await fetch('https://api.web3forms.com/submit', {
+                    const response = await fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify(payload)
+                        body: formData
                     });
 
-                    const emailResult = await emailResponse.json();
-                    if (!emailResponse.ok || !emailResult.success) {
+                    const data = await response.json();
+                    if (!response.ok || !data.success) {
                         throw new Error('Échec de livraison');
                     }
 
@@ -362,11 +351,11 @@
                     formStatus.textContent = 'Votre message a bien été envoyé. Je vous répondrai très prochainement.';
                     formStatus.classList.add('success');
                 } catch (error) {
-                    const configurationMissing = WEB3FORMS_ACCESS_KEY.startsWith('REMPLACE');
-                    formStatus.textContent = configurationMissing
-                        ? 'Configure d’abord la clé Web3Forms dans le script, puis réessaie.'
-                        : 'Une erreur s’est produite pendant l’envoi. Veuillez réessayer.';
+                    formStatus.textContent = 'Une erreur s’est produite pendant l’envoi. Veuillez réessayer.';
                     formStatus.classList.add('error');
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 }
             });
         }
